@@ -1,1 +1,16 @@
- 
+h1, h2, p {
+    font-family: "Open Sans";
+} 
+
+
+h1 {
+    color: #1946ba;
+}
+
+h2 {
+    color: #F5F5F5;
+}
+
+p {
+    color: #ec0b43;
+}
