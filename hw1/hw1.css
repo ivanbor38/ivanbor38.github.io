@@ -16,11 +16,7 @@ div {
     
 }
 
-button {
+button { 
+    font-family: "Open Sans";
+    color: #ffffff;
     background-color: #ec0b43;
-    border: none;
-    color: #fff;
-    padding: 6px;
-}
-
-
