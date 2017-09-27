@@ -16,7 +16,7 @@ function parse() {
  
 
 window.onload = function() {
-    document.getElementById('one').innerHTML = "quote from JS";
+    //document.getElementById('one').innerHTML = "quote from JS";
     parse();
     //var rand = quotes[Math.floor(Math.random() * quotes.length)];
     
