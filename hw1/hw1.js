@@ -11,10 +11,10 @@ function parse() {
     quotes = JSON.parse(request.responseText);
 
 }
-
+ 
 
 window.onload = function() {
     parse();
     var rand = quotes[Math.floor(Math.random() * quotes.length)];
-    document.getElementById('one').innerHTML = '"' + rand.quoteText + '"' + " - " + rand.quoteAuthor
+    document.getElementById('one').innerHTML = '"' + rand.quoteText + '"' + " - " + rand.quoteAuthor;
     }
