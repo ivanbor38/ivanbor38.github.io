@@ -47,5 +47,5 @@ function add_new(){
 
 window.onload = function() {
         
-    document.getElementById('one').innerHTML = "brrrrra"
+    document.getElementById('one').innerHTML = "brrrrra";
     }
