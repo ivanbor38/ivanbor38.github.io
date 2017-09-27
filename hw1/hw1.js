@@ -18,7 +18,9 @@ window.onload = function() {
     //var rand = quotes[Math.floor(Math.random() * quotes.length)];
     
     rand = quotes[0]; 
-    document.getElementById('one').innerHTML =  rand.quoteText  + " - " + rand.quoteAuthor;
+    //document.getElementById('one').innerHTML =  rand.quoteText  + " - " + rand.quoteAuthor;
+    
+    document.getElementById('one').innerHTML = "brrrrra"
     }
     
     
