@@ -1,4 +1,4 @@
-/*
+
 
 var quotes = [];
 
@@ -16,6 +16,7 @@ function parse() {
  
 
 window.onload = function() {
+    document.getElementById('one').innerHTML = "quote from JS";
     parse();
     //var rand = quotes[Math.floor(Math.random() * quotes.length)];
     
@@ -43,9 +44,10 @@ function add_new(){
 
 //    var node = document.createTextNode("This is new.");
 }
-*/
 
+/*
 window.onload = function() {
         
     document.getElementById('one').innerHTML = "quote from JS";
     }
+*/
