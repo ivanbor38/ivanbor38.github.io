@@ -23,7 +23,7 @@ window.onload = function() {
     rand = quotes[0]; 
     //document.getElementById('one').innerHTML =  rand.quoteText  + " - " + rand.quoteAuthor;
     
-    document.getElementById('one').innerHTML = "brrrrra"
+    document.getElementById('one').innerHTML = rand;
     }
     
     
