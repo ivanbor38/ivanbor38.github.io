@@ -15,6 +15,8 @@ function parse() {
 
 window.onload = function() {
     parse();
-    var rand = quotes[Math.floor(Math.random() * quotes.length)];
+    //var rand = quotes[Math.floor(Math.random() * quotes.length)];
+    
+    rand = quotes[0]; 
     document.getElementById('one').innerHTML = '"' + rand.quoteText + '"' + " - " + rand.quoteAuthor;
     }
