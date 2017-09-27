@@ -35,7 +35,7 @@ function add_new(){
     sub_div.ids.add('one');
     sub_div.innerHTML = rand.quoteText  + " - " + rand.quoteAuthor;
 
-    main_div.appendChild(sub_div);
+    main_div.appendChild("powpowpow");
 
 //    var node = document.createTextNode("This is new.");
 }
