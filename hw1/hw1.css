@@ -21,5 +21,6 @@ div {
 .button { 
 
     background-color: #ec0b43;
-    color: #ec0b43;
+    color: white;
+    border: none;
 }
