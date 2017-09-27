@@ -18,7 +18,8 @@ div {
     
 }
 
-button { 
+.button { 
+
     background-color: #ec0b43;
     color: #ec0b43;
 }
