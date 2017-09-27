@@ -1,3 +1,5 @@
+/*
+
 var quotes = [];
 
 function parse() {
@@ -41,3 +43,9 @@ function add_new(){
 
 //    var node = document.createTextNode("This is new.");
 }
+*/
+
+window.onload = function() {
+        
+    document.getElementById('one').innerHTML = "brrrrra"
+    }
