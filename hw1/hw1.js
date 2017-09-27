@@ -18,5 +18,24 @@ window.onload = function() {
     //var rand = quotes[Math.floor(Math.random() * quotes.length)];
     
     rand = quotes[0]; 
-    document.getElementById('one').innerHTML = '"' + rand.quoteText + '"' + " - " + rand.quoteAuthor;
+    document.getElementById('one').innerHTML =  rand.quoteText  + " - " + rand.quoteAuthor;
     }
+    
+    
+    
+
+    
+function add_new(){
+    
+
+    var main_div = document.getElementsByTagName("div");
+    
+    // add new quote
+    var sub_div = document.createElement("p");
+    sub_div.ids.add('one');
+    sub_div.innerHTML = rand.quoteText  + " - " + rand.quoteAuthor;
+
+    main_div.appendChild(sub_div);
+
+//    var node = document.createTextNode("This is new.");
+}
