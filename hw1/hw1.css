@@ -6,7 +6,7 @@ h1 {
 }
 
 h2 {
-    
+    font-family: "Open Sans";
     
 }
 
@@ -16,7 +16,7 @@ div {
     
 }
 
-.button { 
+button { 
     font-family: "Open Sans";
     color: #ffffff;
     background-color: #ec0b43;
