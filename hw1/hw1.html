@@ -17,38 +17,47 @@
 
 
   <body>
-  <div>
+  <div id = 'main' class = "with_border">
  	<h2>  
     	Quote Of the Day:
     </h2>
     
     
-    <p id="one">  quote from HTML</p>
     
+    <div id="hlp" class="quote"></div>
     
-    
+     
     </div>
     <br />
 
     
-    <button>
+    <button id="fst" onclick="change_quote_of_the_day()">
     Change Quote Of the Day 
     </button>
     
-    <button>
+    <button id="sec" onclick="add_new()">
     Add new
     </button>
     
     
-    <button>
+    <button id="third" onclick="sort_quotes()">
     Sort
     </button>
     
-    <button>
-    Get random quote
+    <button onclick="update_drop_down_list()">
+    Clear all
     </button>
     
+    <br /><br />
+    <span> Select author: </span>
+    <br />
+    <select id="list_of_authors" onchange="distinct_author()">
+        <option> All authors</option>
+        
     
+    </select>
     
   </body> 
 </html>
+
+
