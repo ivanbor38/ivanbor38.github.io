@@ -1,5 +1,5 @@
 
-// global variable, parsed json
+// global variable, parses json
 var quotes = [];
 
 // added quotes history 
