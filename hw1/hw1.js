@@ -111,12 +111,13 @@ function distinct_author() {
     erase_all();
     document.getElementById("fst").disabled = true;
     document.getElementById("sec").disabled = true;
-    document.getElementById("third").disabled = true;
+    
 
     var author = document.getElementById("list_of_authors").value;
     var quotes_list = auth_dict[author];
  
     quotes_list.sort();
+    so_far = quotes_list;
     
     for (i = 0; i < quotes_list.length; i++) {
         add_sth(quotes_list[i]);
@@ -157,6 +158,28 @@ function sort_quotes() {
 }
  
 
+// function randomly shuffle quotes on the page
+// BUTTON "Shuffle"
+ 
+function shuffle_quotes() {
+    if (so_far.length < 2) {
+        return true;
+    }
+    erase();
+    for (var i = so_far.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = so_far[i];
+        so_far[i] = so_far[j];
+        so_far[j] = temp;
+    }
+    for (i=0; i< so_far.length; i++) {
+        
+        add_sth(so_far[i]);
+    }
+    
+} 
+ 
+ 
 // function erases all quotes from html page 
 
 function erase() {
