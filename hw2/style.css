@@ -1,0 +1,72 @@
+
+  table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid gray;
+    }
+ 
+  
+
+tbody tr:nth-child(odd) {
+  background-color: #A9A9A9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #DCDCDC;
+}
+
+
+tbody tr:hover {
+    background-color: yellow;
+     color: #000000;
+}
+
+
+
+table {
+  background-color: #DCDCDC;
+}  
+
+
+
+
+thead th, tfoot th {
+  font-family: bold;
+}
+
+th {
+  letter-spacing: 2px;
+}
+
+td {
+  letter-spacing: 1px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+table td{
+    border:1px solid black;
+}
+
+th
+{
+    background: url('001.png') 50px bottom ;
+}
+
+
+img {
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+}
+img.resize {
+    width: 16px; /* you can use % */
+    height: 16px;
+}
+ 
