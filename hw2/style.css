@@ -1,13 +1,18 @@
 
   table {
   table-layout: fixed;
-  width: 100%;
+  
   border-collapse: collapse;
   border: 2px solid gray;
+  
     }
  
-  
-
+ table td.shrink {
+    white-space:nowrap
+} 
+table td.expand {
+    width: 99%
+}
 tbody tr:nth-child(odd) {
   background-color: #A9A9A9;
 }
@@ -37,6 +42,7 @@ thead th, tfoot th {
 
 th {
   letter-spacing: 2px;
+  cursor: n-resize
 }
 
 td {
@@ -54,19 +60,20 @@ table td{
     border:1px solid black;
 }
 
-th
-{
-    background: url('001.png') 50px bottom ;
-}
+
 
 
 img {
     opacity: 1;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
 }
 img.resize {
-    width: 16px; /* you can use % */
-    height: 16px;
+    width: 12px; 
+    height: 12px;
 }
+
+
+
+
  
