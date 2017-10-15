@@ -7,13 +7,14 @@
    <link href="style.css" type="text/css" rel="stylesheet">
   
   
-    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
     <script src="hw2.js"> </script>
      
      
      
     <label>Time update:</label>
-    <input type="range" name="points" min="1995" max="2012" step="1" value="0" id="slider-time" oninput=";">
+    <input type="range" name="points" min="1995" max="2012" step="1" value="0" id="slider-time" oninput=";" class="range">
     <br>
     <label>Filter by:</label>
      <input type="checkbox" class="myCheckbox" value="Americas"> Americas
@@ -23,8 +24,9 @@
      <input type="checkbox" class="myCheckbox" value="Oceania"> Oceania
     <br>
     <label>Aggregation:</label>
-    <label>None<input type="radio" name="details" value="None" onclick=""></label>
-    <label>by Continent<input type="radio" name="details" value="by Continent" onclick=""></label> 
+    <label>Aggregation:</label>
+    <label>None<input type="radio" name="details" value="None" class="aggregation"></label>
+    <label>by Countries<input type="radio" name="details" value="by Countries" class="aggregation"></label>
     
     
     
