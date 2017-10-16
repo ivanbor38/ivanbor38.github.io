@@ -51,7 +51,7 @@ d3.json("countries_1995_2012.json", function(error, data){
   
     
   
-    //console.log(data[0]);
+
   
     d3.selectAll(".myCheckbox").on("change",update);
     d3.selectAll(".aggregation").on("change",update);
@@ -60,7 +60,7 @@ d3.json("countries_1995_2012.json", function(error, data){
     d3.select('.range').on("change", update);
     
     var agg = 'None';
-    var sorting = 'name';
+    var sorting = 'population';
     var encode = 'population';
     
     
@@ -114,14 +114,9 @@ d3.json("countries_1995_2012.json", function(error, data){
             return choices.includes(d['continent']) && d['year'] == curr_year;
             });
     
-        
-        //console.log(curr_year);
-        
-        
-        
-    
+
         changeAgg();
-        //console.log(newData);
+     
     
         if (agg == "by Continents") {
             newData = d3.nest()
@@ -147,14 +142,14 @@ d3.json("countries_1995_2012.json", function(error, data){
                     });
                     
                     aggTable['life_expectancy'] /= numberOfCountries;
-                    //console.log(aggTable);
+                
                     return aggTable;
                 }).entries(newData);
 
             
             newData = newData.map(function (dict) {return dict.value;});
             
-            //console.log(newData);
+          
         }    
     
         
@@ -180,43 +175,6 @@ d3.json("countries_1995_2012.json", function(error, data){
         return d3.descending(a[sorting], b[sorting]);
     });
     
-        
-        
-        
-        var rows = tbody.selectAll("tr.row")
-                .data(newData)
-                .enter()
-                .append("tr").attr("class", "row");
-        
-        
-        //console.log(rows);
-        
-          var cells = rows.selectAll("td")
-            .data(function(row) {
-                //console.log(row);
-                return d3.range(columns.length).map(function(column, i) {
-                    if (column == 2) {
-                        return d3.format(".3s")(row[columns[i]]);
-                    }
-                    if (column == 3) {
-                        return d3.format(".1f")(row[columns[i]]);
-                    }
-                    if (column == 4) {
-                        return d3.format(",")(row[columns[i]]);
-                    }
-                    
-                    return row[columns[i]];
-                });
-            });
-            cells.enter()
-            .append("td")
-            .text(function(d) { return d; });    
-            
-            cells.exit().remove();
-            
-         
-
-
 
  //------------------------------------------------------------------------------------------------------------------------       
         
@@ -229,15 +187,7 @@ d3.json("countries_1995_2012.json", function(error, data){
                         .attr("width", width+margin.left+margin.right)
                         .attr("height", height+margin.top+margin.bottom);
                 
-        
-            
-            
-            
-            
-            
-            
-            
-            
+
             var xScale = d3.scaleLinear().range([0, width]);
             var yScale = d3.scaleBand().rangeRound([0, height], .8, 0);
 
@@ -319,116 +269,13 @@ d3.json("countries_1995_2012.json", function(error, data){
                 div.style("display", "none");
             });
                     
-                  
-            
-        
-        
-        
-        
-        
-        
-        
 
-
-
-        /*
-
-         
-        thead.append("tr").selectAll("th")
-        .data(columns).enter().append("th").text(function(d) { return d; }).on("click", function(header, i) {
-        
-        
-        
-        
-            d3.select("img").remove();
-        
-
-        
-            
-        
-            
-            if (header == curr_header) {
-                cnt++;
-                
-                if (cnt % 2 == 1) {
-                    d3.select(this).append('img').attr('src', '002.png');
-                    d3.select(this).style("cursor", "n-resize");
-                    tbody.selectAll("tr").sort(function(a, b) {
-                        if (header == 'continent') {
-                            
-                            return d3.ascending(a[header] + a['name'], b[header] + b['name']);
-                        }
-                        return d3.ascending(a[header], b[header]);
-                    });
-                    
-                }
-                else {
-                    d3.select(this).append('img').attr('src', '001.png');               
-                
-                    tbody.selectAll("tr").sort(function(a, b) {
-                        if (header == 'continent') {
-                                return d3.descending(a[header] + a['name'], b[header] + b['name']);
-                            }
-                        
-                      return d3.descending(a[header], b[header]); 
-                        });
-                }
-            }
-            
-            else {
-                
-                d3.select(this).append('img').attr('src', '001.png');
-                cnt = 0;
-                curr_header = header;
-                tbody.selectAll("tr").sort(function(a, b) {
-                    if (header == 'continent') {
-                                return d3.descending(a[header] + a['name'], b[header] + b['name']);
-                            }
-                      return d3.descending(a[header], b[header]);
-                        });
-            }
-           
-        });
-        
-        
-        */
         d3.select('table').remove();
-        
-        
-        
-        
-        //theader.exit().remove();
+
         }
   
     update();
-  //-------------------------------------------------------------------------------------------------
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-
-
-
-
-
-
-
-
-  
-  //rows.exit().remove();
-
-    //console.log(rows);
     
 }
 )
