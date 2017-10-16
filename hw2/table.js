@@ -38,7 +38,7 @@ d3.json("countries_1995_2012.json", function(error, data){
         table.append("caption").html("World Countries Ranking");
   
   
-    //console.log(data[0]);
+
   
     d3.selectAll(".myCheckbox").on("change",update);
     d3.selectAll(".aggregation").on("change",update);
@@ -86,14 +86,9 @@ d3.json("countries_1995_2012.json", function(error, data){
         newData = data.filter(function(d,i){
             return choices.includes(d['continent']) && d['year'] == curr_year;});
     
-        
-        //console.log(curr_year);
-        
-        
-        
-    
+            
         changeAgg();
-        //console.log(newData);
+      
     
         if (agg == "by Countries") {
             newData = d3.nest()
@@ -119,32 +114,17 @@ d3.json("countries_1995_2012.json", function(error, data){
                     });
                     
                     aggTable['life_expectancy'] /= numberOfCountries;
-                    //console.log(aggTable);
+                    
                     return aggTable;
                 }).entries(newData);
 
             
             newData = newData.map(function (dict) {return dict.value;});
             
-            //console.log(newData);
+            
         }    
     
     
-    
-    
-    
-    
-        //var rows = tbody.selectAll("tr.row")
-        //.data(newData);
-        //
-        //
-        //        
-        //
-        //rows.enter()
-        //.append("tr").attr("class", "row");
-        //
-        //
-        //rows.exit().remove();
         
         
         var rows = tbody.selectAll("tr.row")
@@ -153,11 +133,11 @@ d3.json("countries_1995_2012.json", function(error, data){
                 .append("tr").attr("class", "row");
         
         
-        //console.log(rows);
+        
         
           var cells = rows.selectAll("td")
             .data(function(row) {
-                //console.log(row);
+                
                 return d3.range(columns.length).map(function(column, i) {
                     if (column == 2) {
                         return d3.format(".3s")(row[columns[i]]);
@@ -182,7 +162,9 @@ d3.json("countries_1995_2012.json", function(error, data){
         thead.append("tr").selectAll("th")
         .data(columns).enter().append("th").text(function(d) { return d; }).on("click", function(header, i) {
         
-        
+        if (header == 'year') {
+            return true;
+        }
         
         
         d3.select("img").remove();
@@ -190,12 +172,18 @@ d3.json("countries_1995_2012.json", function(error, data){
         
             
             if (header == curr_header) {
+                if (header == 'year') {
+                    return;
+                }
                 cnt++;
+                
                 
                 if (cnt % 2 == 1) {
                     d3.select(this).append('img').attr('src', '002.png');
                     d3.select(this).style("cursor", "n-resize");
                     tbody.selectAll("tr").sort(function(a, b) {
+                        
+                        
                         if (header == 'continent') {
                             
                             return d3.ascending(a[header] + a['name'], b[header] + b['name']);
@@ -239,39 +227,11 @@ d3.json("countries_1995_2012.json", function(error, data){
         
         
         
-        //theader.exit().remove();
+        
         }
   
     update();
-  //-------------------------------------------------------------------------------------------------
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-
-
-
-
-
-
-
-
-  
-  //rows.exit().remove();
-
-    //console.log(rows);
-    
 }
 )
 
