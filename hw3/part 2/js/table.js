@@ -371,12 +371,14 @@ class Table {
                 }
 				return '';
             })
-            .attr("class", function(d) {
+
+            cells.attr("class", function(d) {
+
                 if (d.type == "game") {
                     if (d.vis == "team_name") {
                         return "team_name";
                     }
-                    return "game";
+                    return "team_name";
                 }
                 else if (d.vis == "team_name") {
                     return "team_name";
@@ -433,15 +435,15 @@ class Table {
             .attr("fill", "white")
             .text(d => d.value[0]);
 
-		//console.log(this.goalScale);
-        //g.filter(d => d.vis == "goals" && d.value[0] == d.value[1])
-        //    .attr("class", d => d.type)
-        //    .append("circle")
-        //    .attr("class", "draw")
-		//	//.attr('cy', 11)
-		//	//.attr('r', 6)
-		//	//.attr('fill', 'rgb(128,128,128)')
-        //    .attr("cx", d => Math.round(this.goalScale(d.value[0] + 3)));
+		console.log(this.goalScale);
+        g.filter(d => d.vis == "goals" && d.value[0] == d.value[1])
+            .attr("class", d => d.type)
+            .append("circle")
+            .attr("class", "draw")
+			//.attr('cy', 11)
+			//.attr('r', 6)
+			//.attr('fill', 'rgb(128,128,128)')
+            .attr("cx", d => Math.round(this.goalScale(d.value[0] + 3)));
 
         var goalRanges = g.filter(d => d.vis == "goals" && d.value[0] != d.value[1])
             .attr("class", d => d.type);
