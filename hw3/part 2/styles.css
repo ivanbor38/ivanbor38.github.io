@@ -52,6 +52,12 @@ tbody tr .game {
     /*background-color: #dbdbdb;*/
 /*}*/
 
+.team_name {
+    border-left: 0;
+    color: #317f19;
+}
+
+
 .label{
     fill: #ffffff;
     font: 14px sans-serif;

@@ -372,10 +372,15 @@ class Table {
 				return '';
             })
             .attr("class", function(d) {
-				if (d.type == 'game') {
-					return 'game';
-				}
-				return '';
+                if (d.type == "game") {
+                    if (d.vis == "team_name") {
+                        return "team_name";
+                    }
+                    return "game";
+                }
+                else if (d.vis == "team_name") {
+                    return "team_name";
+                }
             });
 
 
