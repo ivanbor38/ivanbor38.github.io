@@ -47,6 +47,9 @@ tbody tr:hover {
 tbody tr .game {
     background-color: #f0f0f0;
 }
+tbody tr .other_game_cols {
+    background-color: #f0f0f0;
+}
 
 /*tbody tr .game:hover {*/
     /*background-color: #dbdbdb;*/

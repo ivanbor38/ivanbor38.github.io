@@ -378,7 +378,7 @@ class Table {
                     if (d.vis == "team_name") {
                         return "game";
                     }
-                    return "";
+                    return "other_game_cols";
                 }
                 else if (d.vis == "team_name") {
                     return "team_name";
