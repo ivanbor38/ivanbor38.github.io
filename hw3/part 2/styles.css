@@ -1,7 +1,7 @@
 
 table {
     border-collapse: collapse;
-    font: 14px sans-serif;
+    font: 12px sans-serif;
     /*width: 720px;*/
 }
 
@@ -195,10 +195,12 @@ rect.negative {
 }
 
 .game rect {
-    y: 9;
+    height: 5px;
+    y: 8;
 }
 
 .game circle {
+    fill: #f0f0f0;
     r: 4;
     cy: 11;
 }

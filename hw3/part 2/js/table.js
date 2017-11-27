@@ -21,8 +21,12 @@ class Table {
 
             teamData[i]['value']['key'] = teamData[i]['key'];
 
-        }
+            if (teamData[i]['value']['Result']['label'] == 'Round of Sixteen') {
+                teamData[i]['value']['Result']['label'] = '1/8';
+            }
 
+        }
+        //console.log(teamData);
         //Default values for the Table Headers
         this.tableHeaders = ["Delta Goals", "Result", "Wins", "Losses", "TotalGames"];
 
@@ -270,7 +274,7 @@ class Table {
 
                     if (d.value.type == 'game') {
                         this.tree.updateTree(d);
-                        
+
                     }
 
                     if (d.value.type == 'aggregate') {
@@ -425,14 +429,14 @@ class Table {
             .text(d => d.value[0]);
 
 		//console.log(this.goalScale);
-        g.filter(d => d.vis == "goals" && d.value[0] == d.value[1])
-            .attr("class", d => d.type)
-            .append("circle")
-            .attr("class", "draw")
-			.attr('cy', 11)
-			.attr('r', 6)
-			.attr('fill', 'rgb(128,128,128)')
-            .attr("cx", d => Math.round(this.goalScale(d.value[0] + 3)));
+        //g.filter(d => d.vis == "goals" && d.value[0] == d.value[1])
+        //    .attr("class", d => d.type)
+        //    .append("circle")
+        //    .attr("class", "draw")
+		//	//.attr('cy', 11)
+		//	//.attr('r', 6)
+		//	//.attr('fill', 'rgb(128,128,128)')
+        //    .attr("cx", d => Math.round(this.goalScale(d.value[0] + 3)));
 
         var goalRanges = g.filter(d => d.vis == "goals" && d.value[0] != d.value[1])
             .attr("class", d => d.type);
@@ -449,8 +453,8 @@ class Table {
                 return this.goalScale(max_min[1] - max_min[0]);
             })
             .attr("x", d => d.type == "game" ? Math.round(this.goalScale(d3.min(d.value))) + 2 : Math.round(this.goalScale(d3.min(d.value)) + 6))
-			.attr('height', 10)
-			.attr('y', 6);
+			//.attr('height', 10)
+			//.attr('y', 6);
 
 
         goalRanges.append("circle")
@@ -461,8 +465,8 @@ class Table {
 				return "positive";
 			})
             .attr('cx', d => Math.round(this.goalScale(d3.min(d.value)) + 6))
-			.attr('cy', 11)
-			.attr('r', 6);
+			//.attr('cy', 11)
+			//.attr('r', 6);
 
         goalRanges.append("circle")
             .attr("class", function(d) {
