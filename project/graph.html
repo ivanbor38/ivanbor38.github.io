@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Group Connections</title>
+
+<head>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+
+		td {
+			border: #333333 1px solid;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		tr {
+			border: #333333 1px solid;
+		}
+
+		th {
+			border: #333333 1px solid;
+		}
+
+		path.arc {
+			cursor: move;
+			fill: #fff;
+		}
+
+		.node {
+			font-size: 10px;
+		}
+
+		.node:hover {
+			fill: #1f77b4;
+		}
+
+		.link {
+			fill: none;
+			stroke: #8bc6f0f1;
+			stroke-opacity: .4;
+			pointer-events: none;
+		}
+
+		.link.source,
+		.link.target {
+			stroke-opacity: 1;
+			stroke-width: 2px;
+		}
+
+		.node.target {
+			fill: #2ca02c !important;
+		}
+
+		.link.source {
+			stroke: #2ca02c;
+		}
+
+		.node.source {
+			fill: #2ca02c;
+		}
+
+		.link.target {
+			stroke: #2ca02c;
+		}
+
+
+		body {
+			font: 300 36px "Verdana";
+			background-color: #eaf3ff;
+			margin: 10px 0 0 0;
+			position: relative;
+
+		}
+
+		a:link,
+		a:visited {
+			color: #777;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #666;
+		}
+
+		blockquote {
+			margin: 0;
+		}
+
+		blockquote:before {
+			content: "“";
+			position: absolute;
+			left: -.4em;
+		}
+
+		blockquote:after {
+			content: "”";
+			position: absolute;
+		}
+
+		body>ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 40px;
+		}
+
+		h1,
+		h2,
+		h3 {
+			font-weight: inherit;
+			margin: ;
+		}
+
+		h2,
+		h3 {
+			text-align: right;
+			font-size: inherit;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+		h2 {
+			font-size: 24px;
+			position: absolute;
+		}
+
+		h3 {
+			bottom: -20px;
+			font-size: 18px;
+		}
+
+		.invert {
+			background: #1f1f1f;
+			color: #dcdccc;
+		}
+
+		.invert h2,
+		.invert h3 {
+			color: #7f9f7f;
+		}
+
+		.string,
+		.regexp {
+			color: #f39;
+		}
+
+		.keyword {
+			color: #00c;
+		}
+
+		.comment {
+			color: #777;
+			font-style: oblique;
+		}
+
+		.number {
+			color: #369;
+		}
+
+		.class,
+		.special {
+			color: rgba(136, 198, 230, 0.801);
+		}
+
+		body>svg {
+			position: absolute;
+			top: -80px;
+			left: -160px;
+		}
+
+		.table-header {
+			font-size: 21px;
+
+			width: 100%;
+			display: block;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>VK Groups Connection</h1>
+	<link rel="stylesheet" type="text/css" href="js/nouislider.min.css">
+	<script src="js/nouislider.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="js/groups.js"></script>
+	<script src="js/graph.js"></script>
+
+
+</body>
+
+</html>
