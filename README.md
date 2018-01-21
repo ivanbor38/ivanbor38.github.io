@@ -15,5 +15,5 @@ created by Ivan Nuzhdenko, c4111 group
 [Part 2](https://ivanbor38.github.io/hw3/part%202/hw3-part2.html)        
 
 ## Final project   
-[Graph] (https://ivanbor38.github.io/project/graph.html)
+[Graph](https://ivanbor38.github.io/project/graph.html)
 
