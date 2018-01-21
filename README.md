@@ -12,5 +12,8 @@ created by Ivan Nuzhdenko, c4111 group
 
 ## Homework 3
 [Part 1](https://ivanbor38.github.io/hw3/part%201/hw3.html)  
-[Part 2](https://ivanbor38.github.io/hw3/part%202/hw3-part2.html)     
+[Part 2](https://ivanbor38.github.io/hw3/part%202/hw3-part2.html)        
+
+## Final project   
+[Graph] (https://ivanbor38.github.io/project/graph.html)
 
